@@ -1,0 +1,24 @@
+config:
+  rendered: adoc
+
+modules:
+  introduction:
+    name: Introduction
+  getting-started:
+    name: Getting Started
+  deploy-with-tls:
+    name: Deploy with TLS
+  customize-pki:
+    name: Build your PKI as a Service
+  authentication:
+    name: Add Authentication & Authorization
+  static-secrets:
+    name: Manage and inject secrets
+  dynamic-secrets:
+    name: Get dynamic credentials for DB
+  service-mesh:
+    name: Zero trust network with Mesh
+  image-signature:
+    name: Sign your container images
+  env-info:
+    name: "Appendix: Lab Env Info"
