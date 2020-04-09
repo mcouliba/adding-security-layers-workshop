@@ -1,0 +1,18 @@
+id: "adding-security-layers"
+name: "Adding security layers to your App with OpenShift Workshop"
+
+content:
+  url: https://raw.githubusercontent.com/lbroudoux/adding-security-layers/master
+
+modules:
+  activate:
+  - introduction
+  - getting-started
+  - deploy-with-tls
+  - customize-pki
+  - authentication
+  - static-secrets
+  - dynamic-secrets
+  - service-mesh
+  - image-signature
+  - env-info

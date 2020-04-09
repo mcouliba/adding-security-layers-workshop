@@ -1,0 +1,11 @@
+{
+  "OPENSHIFT_CONSOLE_URL": "https://console-openshift-console.192.168.99.100.nip.io",
+  "OPENSHIFT_API_URL": "https://api.192.168.99.100.nip.io",
+  "APPS_HOSTNAME_SUFFIX": "192.168.99.100.nip.io",
+  "OPENSHIFT_USER": "userX",
+  "OPENSHIFT_PASSWORD": "PASSWORD",
+  "PROJECT": "asl-projectX",
+  "CODEREADY_WORKSPACES_URL": "http://che-eclipse-che.apps.192.168.99.100.nip.io",
+  "VAULT_URL": "https://vault-vault.apps.192.168.99.100.nip.io",
+  "KIALI_URL": "http://kiali-istio-system.apps.192.168.99.100.nip.io"
+}

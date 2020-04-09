@@ -1,0 +1,54 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+message: |
+  Created ${NAME} BuildConfig and ImageStream instance
+
+metadata:
+  annotations:
+    openshift.io/display-name: Bookbag
+    tags: gpte
+    template.openshift.io/bindable: "false"
+  name: bookbag-build
+
+parameters:
+  - name: NAME
+    required: true
+    value: adding-security-layers-workshop-bookbag
+  - name: BUILDER_IMAGE
+    required: true
+    value: quay.io/openshifthomeroom/workshop-dashboard:5.0.0
+  - name: GIT_REPO
+    value: https://github.com/lbroudoux/adding-security-layers-workshop.git
+  - name: GIT_REF
+    value: master
+  - name: GIT_CONTEXT
+    value: /
+
+objects:
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    metadata:
+      name: ${NAME}
+
+  - apiVersion: build.openshift.io/v1
+    kind: BuildConfig
+    metadata:
+      name: ${NAME}
+    spec:
+      output:
+        to:
+          kind: ImageStreamTag
+          name: ${NAME}:latest
+      source:
+        git:
+          ref: ${GIT_REF}
+          uri: ${GIT_REPO}
+        contextDir: ${GIT_CONTEXT}
+        type: Git
+      strategy:
+        sourceStrategy:
+          from:
+            kind: DockerImage
+            name: ${BUILDER_IMAGE}
+        type: Source
+      triggers: []

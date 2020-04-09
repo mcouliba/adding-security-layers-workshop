@@ -4,21 +4,31 @@ config:
 modules:
   introduction:
     name: Introduction
+    exit_sign: "Next step"
   getting-started:
     name: Getting Started
+    exit_sign: "Next step"
   deploy-with-tls:
     name: Deploy with TLS
+    exit_sign: "Next step"
   customize-pki:
     name: Build your PKI as a Service
+    exit_sign: "Next step"
   authentication:
     name: Add Authentication & Authorization
+    exit_sign: "Next step"
   static-secrets:
     name: Manage and inject secrets
+    exit_sign: "Next step"
   dynamic-secrets:
     name: Get dynamic credentials for DB
+    exit_sign: "Next step"
   service-mesh:
     name: Zero trust network with Mesh
+    exit_sign: "Next step"
   image-signature:
     name: Sign your container images
+    exit_sign: "Finish worshop"
   env-info:
     name: "Appendix: Lab Env Info"
+    exit_sign: "Back to Home"
