@@ -22,7 +22,7 @@ parameters:
   - name: GIT_REF
     value: master
   - name: GIT_CONTEXT
-    value: /
+    value: guide
 
 objects:
   - apiVersion: image.openshift.io/v1
