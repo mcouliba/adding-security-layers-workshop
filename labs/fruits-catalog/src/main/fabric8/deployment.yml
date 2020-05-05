@@ -1,5 +1,8 @@
 spec:
   template:
+    metadata:
+      labels:
+        maistra.io/expose-route: 'true'
     spec:
       containers:
         - 
